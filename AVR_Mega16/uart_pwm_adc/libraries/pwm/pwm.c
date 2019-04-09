@@ -1,9 +1,13 @@
 #include "pwm.h"
 
 void pwm_init(void){
-	DDRB |= 1<<3;
+	DDRD |= 1<<4 | 1<<5;
 
-	TCCR0|=(0<<CS02)|(1<<CS01)|(0<<CS00);
-	TCCR0|=(0<<WGM01)|(1<<WGM00);
-	TCCR0|=(1<<COM01)|(0<<COM00);
+	TCCR1B|=(1<<CS12)|(0<<CS11)|(0<<CS10);
+
+	TCCR1A|=(1<<WGM11)|(0<<WGM10);
+	TCCR1B|=(1<<WGM13)|(0<<WGM12);
+
+	TCCR1A|=(1<<COM1A1)|(0<<COM1A0);
+	TCCR1A|=(1<<COM1B1)|(0<<COM1B0);
 }

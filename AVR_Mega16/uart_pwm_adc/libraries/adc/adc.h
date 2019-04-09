@@ -4,7 +4,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
-#define USE_ADC_8BIT	1
+#define USE_ADC_8BIT	0
 #define USE_ADC_AVCC	1
 
 #if USE_ADC_8BIT

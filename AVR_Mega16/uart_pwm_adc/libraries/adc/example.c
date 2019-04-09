@@ -2,7 +2,7 @@
 
 #include "adc.h"
 
-unsigned char vADC
+unsigned int vADC
 
 int main(void){
 	vADC = adc_read(0);

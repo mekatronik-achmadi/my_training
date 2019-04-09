@@ -4,7 +4,9 @@
 
 int main(void){
 	pwm_init();
-	OCR0 = 128;
+
+	ICR1 = 1023;
+	OCR1A = 512;
 
 	while(1);
     return 0;
